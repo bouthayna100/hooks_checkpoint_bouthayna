@@ -37,10 +37,17 @@
 }
 
 
+.style {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* margin-right: 150px; */
+    float: left;
+}
 
 .icon {
   padding: 10px;
-  background: #007bff;
+  background: #4dbae4;
   color: white;
   min-width: 50px;
   text-align: center;

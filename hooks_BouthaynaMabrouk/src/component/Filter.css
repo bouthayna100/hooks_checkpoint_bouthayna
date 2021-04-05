@@ -10,7 +10,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: space-between;
-          background-color: #007bff;
+          background-color: #45b8e4f2;
+}
+.rate-serch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     margin-right: 150px; 
+    float: left;
+    margin-top:20px;
 }
 .link-a{
   color: white;
@@ -44,7 +53,8 @@
   width: 100%;
   margin-bottom: 15px;
 }
-.Rating { font-size: 25px; }
+.Rating { font-size: 25px; 
+margin-top: 30px;}
 
 
 

@@ -7,14 +7,13 @@ const Filter = ( { serch, serchRate } ) => {
     const [ rating, setRating ] = useState( 0 );
 
     const hundleChange = ( e ) => {
-        serch( e.target.value );
+        serch( e.target.value.replace( /^\s+/g, '' ).replace( /\s+$/g, '' ));
         setRating( 0 );
     }
     const hundleClick = () => {
         setRating( 0 );
         serchRate( 0 );
         document.getElementById( "title" ).value = '';
-
         serch( "" );
     }
     const onStarClick = ( nextValue, prevValue, name ) => {
@@ -25,13 +24,13 @@ const Filter = ( { serch, serchRate } ) => {
 
     return <div>
         <div className="contain">
-            <div className="form-group" style={{ marginLeft: "10%", marginTop: "2%" }}>
+            <div className="form-group" style={{  marginTop: "2%" }}>
                 <div className="input-container">
                     <i className="fa fa-search icon"></i>
                     <input id="title" onChange={hundleChange} type="text" className="form-control" placeholder="Search Movie" />
                 </div>
             </div>
-            <div style={{display: "flex", flexDirection: "row", alignItems: "center", marginRight: "150px" }}>
+            <div NameClass="rate-serch">
                 
                 <StarRatingComponent
                     name="rate"
@@ -41,7 +40,8 @@ const Filter = ( { serch, serchRate } ) => {
                     onStarClick={onStarClick.bind( this )}
                     emptyStarColor={"white"} />
                 
-                <a className="link-a" style={{color: "white", cursor: "pointer", fontSize: "16px", marginLeft: "15px"
+                <a className="link-a" style={{
+                    color: "white", cursor: "pointer", fontSize: "16px", marginRight: "20px",marginBottom:"20px"
                 }} onClick={hundleClick} id="reset">
                     Reset Search
                      </a>

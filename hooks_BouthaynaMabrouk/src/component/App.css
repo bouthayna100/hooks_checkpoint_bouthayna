@@ -9,7 +9,11 @@
 }
 
 
-
+.btn-primary {
+    color: #fff;
+    background-color: #4dbae4;
+    border-color: #4dbae4;
+}
 
 .form-label{
   color:#007bff;
