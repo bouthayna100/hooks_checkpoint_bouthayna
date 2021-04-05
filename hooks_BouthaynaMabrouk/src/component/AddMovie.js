@@ -98,7 +98,7 @@ const AddMovie = ( { add } ) => {
                             <p id="erreurRate" style={{ color: "red" }}></p>
 
                             <button onClick={submit} type="button"
-                                className="btn btn-primary btn-block">Submit</button>
+                                className="btn btn-primary btn-block">Save</button>
                         </form>
                     </Modal.Body>
                 </Modal>
